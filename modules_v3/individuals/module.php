@@ -101,7 +101,7 @@ class individuals_WT_Module extends WT_Module implements WT_Module_Sidebar {
 			var timerid = null;
 			jQuery("#sb_indi_name").keyup(function(e) {
 				if (timerid) window.clearTimeout(timerid);
-				timerid = window.setTimeout("isearchQ()", 500);
+				timerid = window.setTimeout(isearchQ, 500);
 			});
 			jQuery("#sb_content_individuals").on("click", ".sb_indi_letter", function() {
 				jQuery("#sb_indi_content").load(this.href);

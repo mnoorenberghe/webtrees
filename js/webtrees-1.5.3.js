@@ -231,7 +231,9 @@ var show = false;
 
 	var timeouts = [];
 	function family_box_timeout(boxid) {
-		timeouts[boxid] = setTimeout("hide_family_box('"+boxid+"')", 2500);
+		timeouts[boxid] = setTimeout(function() {
+			hide_family_box(boxid);
+		}, 2500);
 	}
 
 	function clear_family_box_timeout(boxid) {
@@ -1086,7 +1088,9 @@ function hide_submenu(elementid) {
 
 function timeout_submenu(elementid) {
 	if (typeof menutimeouts[elementid] !== "number") {
-		menutimeouts[elementid] = setTimeout("hide_submenu('"+elementid+"')", 100);
+		menutimeouts[elementid] = setTimeout(function() {
+			hide_submenu(elementid);
+		}, 100);
 	}
 }
 

@@ -101,7 +101,7 @@ class families_WT_Module extends WT_Module implements WT_Module_Sidebar {
 			var famtimerid = null;
 			jQuery("#sb_fam_name").keyup(function(e) {
 				if (famtimerid) window.clearTimeout(famtimerid);
-				famtimerid = window.setTimeout("fsearchQ()", 500);
+				famtimerid = window.setTimeout(fsearchQ, 500);
 			});
 			jQuery("#sb_content_families").on("click", ".sb_fam_letter", function() {
 				jQuery("#sb_fam_content").load(this.href);

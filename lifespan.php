@@ -43,7 +43,10 @@ $controller
 		}
 		function scroll(move) {
 			if (timer==null) return;  // If timer is not set timeline doesn\'t scroll
-			timer = setTimeout("scroll(\'"+move+"\')",speed); // Keeps the timeline moving as long as the user holds down the mouse button on one of the direction arrows
+                        // Keep the timeline moving as long as the user holds down the mouse button on one of the direction arrows
+			timer = setTimeout(function scrollTimerCallback() {
+				scroll(move);
+			}, speed);
 			topInnerDiv = document.getElementById("topInner");
 			innerDiv = document.getElementById("inner");
 			myouterDiv = document.getElementById("lifespan_chart");

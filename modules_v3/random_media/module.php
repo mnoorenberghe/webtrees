@@ -145,7 +145,7 @@ class random_media_WT_Module extends WT_Module implements WT_Module_Block {
 
 						function playSlideShow() {
 							if (play) {
-								window.setTimeout("reload_image()", 6000);
+								window.setTimeout(reload_image, 6000);
 							}
 						}
 						function reload_image() {

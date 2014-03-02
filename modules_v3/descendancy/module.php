@@ -103,7 +103,7 @@ class descendancy_WT_Module extends WT_Module implements WT_Module_Sidebar {
 			var dtimerid = null;
 			jQuery("#sb_desc_name").keyup(function(e) {
 				if (dtimerid) window.clearTimeout(dtimerid);
-				dtimerid = window.setTimeout("dsearchQ()", 500);
+				dtimerid = window.setTimeout(dsearchQ, 500);
 			});
 
 			jQuery("#sb_desc_content").on("click", ".sb_desc_indi", function() {

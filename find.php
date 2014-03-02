@@ -377,7 +377,9 @@ if ($type == "facts") {
 		}
 		,askRefresh:function() {
 			this._clearTimer();
-			this._timer=setTimeout("Lister.refreshNow()",200);
+			this._timer = setTimeout(function() {
+				Lister.refreshNow()
+			}, 200);
 		}
 		,refreshNow:function(force) {
 			this._clearTimer();
